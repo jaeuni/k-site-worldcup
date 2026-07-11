@@ -1,0 +1,5 @@
+﻿server.stdout.log
+server.stderr.log
+node_modules/
+.netlify/
+.DS_Store

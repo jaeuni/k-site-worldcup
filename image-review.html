@@ -1,0 +1,27 @@
+﻿<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>한국 여행지 이미지 검수</title>
+    <link rel="stylesheet" href="/image-review.css" />
+  </head>
+  <body>
+    <header class="review-header">
+      <a class="review-brand" href="/">한국 여행지 월드컵</a>
+      <div>
+        <span>IMAGE REVIEW</span>
+        <h1>실사 이미지 검수</h1>
+      </div>
+    </header>
+    <main>
+      <div class="review-toolbar">
+        <label for="batch-select">검수 배치</label>
+        <select id="batch-select"></select>
+        <strong id="batch-count"></strong>
+      </div>
+      <section id="review-grid" class="review-grid" aria-live="polite"></section>
+    </main>
+    <script src="/image-review.js?v=20260710-travel-100"></script>
+  </body>
+</html>

@@ -1,0 +1,1011 @@
+{
+  "project": "한국 여행지 월드컵",
+  "batch": "travel-100",
+  "imagePolicy": "Each image is an original AI-generated scenic interpretation. Avoid logos, legible signs, copyrighted characters, and copied photographs.",
+  "generator": "ChatGPT Images",
+  "promptVersion": "korea-travel-photo-v1",
+  "images": [
+    {
+      "placeId": "place_001",
+      "name": "5대 궁궐",
+      "file": "place_001.png",
+      "batch": "travel-100",
+      "status": "approved",
+      "generator": "ChatGPT Images",
+      "promptVersion": "korea-travel-photo-v1",
+      "approvedAt": "2026-07-11"
+    },
+    {
+      "placeId": "place_002",
+      "name": "한강공원",
+      "file": "place_002.png",
+      "batch": "travel-100",
+      "status": "approved",
+      "generator": "ChatGPT Images",
+      "promptVersion": "korea-travel-photo-v1",
+      "approvedAt": "2026-07-11"
+    },
+    {
+      "placeId": "place_003",
+      "name": "성수동 거리&서울숲",
+      "file": "place_003.png",
+      "batch": "travel-100",
+      "status": "approved",
+      "generator": "ChatGPT Images",
+      "promptVersion": "korea-travel-photo-v1",
+      "approvedAt": "2026-07-11"
+    },
+    {
+      "placeId": "place_004",
+      "name": "홍대 레드로드",
+      "file": "place_004.png",
+      "batch": "travel-100",
+      "status": "approved",
+      "generator": "ChatGPT Images",
+      "promptVersion": "korea-travel-photo-v1",
+      "approvedAt": "2026-07-11"
+    },
+    {
+      "placeId": "place_005",
+      "name": "국립중앙박물관",
+      "file": "place_005.png",
+      "batch": "travel-100",
+      "status": "approved",
+      "generator": "ChatGPT Images",
+      "promptVersion": "korea-travel-photo-v1",
+      "approvedAt": "2026-07-11"
+    },
+    {
+      "placeId": "place_006",
+      "name": "N서울타워",
+      "file": "place_006.png",
+      "batch": "travel-100",
+      "status": "approved",
+      "generator": "ChatGPT Images",
+      "promptVersion": "korea-travel-photo-v1",
+      "approvedAt": "2026-07-11"
+    },
+    {
+      "placeId": "place_007",
+      "name": "서울스카이&롯데월드&석촌호수",
+      "file": "place_007.png",
+      "batch": "travel-100",
+      "status": "approved",
+      "generator": "ChatGPT Images",
+      "promptVersion": "korea-travel-photo-v1",
+      "approvedAt": "2026-07-11"
+    },
+    {
+      "placeId": "place_008",
+      "name": "광화문광장&청계광장",
+      "file": "place_008.png",
+      "batch": "travel-100",
+      "status": "approved",
+      "generator": "ChatGPT Images",
+      "promptVersion": "korea-travel-photo-v1",
+      "approvedAt": "2026-07-11"
+    },
+    {
+      "placeId": "place_009",
+      "name": "청와대앞길&서촌마을",
+      "file": "place_009.png",
+      "batch": "travel-100",
+      "status": "approved",
+      "generator": "ChatGPT Images",
+      "promptVersion": "korea-travel-photo-v1",
+      "approvedAt": "2026-07-11"
+    },
+    {
+      "placeId": "place_010",
+      "name": "송도 센트럴파크",
+      "file": "place_010.png",
+      "batch": "travel-100",
+      "status": "approved",
+      "generator": "ChatGPT Images",
+      "promptVersion": "korea-travel-photo-v1",
+      "approvedAt": "2026-07-11"
+    },
+    {
+      "placeId": "place_011",
+      "name": "강화 교동도",
+      "file": "place_011.png",
+      "batch": "travel-100",
+      "status": "approved",
+      "generator": "ChatGPT Images",
+      "promptVersion": "korea-travel-photo-v1",
+      "approvedAt": "2026-07-11"
+    },
+    {
+      "placeId": "place_012",
+      "name": "개항장문화지구-인천차이나타운",
+      "file": "place_012.png",
+      "batch": "travel-100",
+      "status": "approved",
+      "generator": "ChatGPT Images",
+      "promptVersion": "korea-travel-photo-v1",
+      "approvedAt": "2026-07-11"
+    },
+    {
+      "placeId": "place_013",
+      "name": "수원화성",
+      "file": "place_013.png",
+      "batch": "travel-100",
+      "status": "approved",
+      "generator": "ChatGPT Images",
+      "promptVersion": "korea-travel-photo-v1",
+      "approvedAt": "2026-07-11"
+    },
+    {
+      "placeId": "place_014",
+      "name": "용인 에버랜드&캐리비안베이",
+      "file": "place_014.png",
+      "batch": "travel-100",
+      "status": "approved",
+      "generator": "ChatGPT Images",
+      "promptVersion": "korea-travel-photo-v1",
+      "approvedAt": "2026-07-11"
+    },
+    {
+      "placeId": "place_015",
+      "name": "임진각과 파주DMZ",
+      "file": "place_015.png",
+      "batch": "travel-100",
+      "status": "approved",
+      "generator": "ChatGPT Images",
+      "promptVersion": "korea-travel-photo-v1",
+      "approvedAt": "2026-07-11"
+    },
+    {
+      "placeId": "place_016",
+      "name": "아침고요수목원",
+      "file": "place_016.png",
+      "batch": "travel-100",
+      "status": "approved",
+      "generator": "ChatGPT Images",
+      "promptVersion": "korea-travel-photo-v1",
+      "approvedAt": "2026-07-11"
+    },
+    {
+      "placeId": "place_017",
+      "name": "두물머리",
+      "file": "place_017.png",
+      "batch": "travel-100",
+      "status": "approved",
+      "generator": "ChatGPT Images",
+      "promptVersion": "korea-travel-photo-v1",
+      "approvedAt": "2026-07-11"
+    },
+    {
+      "placeId": "place_018",
+      "name": "파주 헤이리 예술마을",
+      "file": "place_018.png",
+      "batch": "travel-100",
+      "status": "approved",
+      "generator": "ChatGPT Images",
+      "promptVersion": "korea-travel-photo-v1",
+      "approvedAt": "2026-07-11"
+    },
+    {
+      "placeId": "place_019",
+      "name": "서울대공원&과천 문화시설",
+      "file": "place_019.png",
+      "batch": "travel-100",
+      "status": "approved",
+      "generator": "ChatGPT Images",
+      "promptVersion": "korea-travel-photo-v1",
+      "approvedAt": "2026-07-11"
+    },
+    {
+      "placeId": "place_020",
+      "name": "한국민속촌",
+      "file": "place_020.png",
+      "batch": "travel-100",
+      "status": "approved",
+      "generator": "ChatGPT Images",
+      "promptVersion": "korea-travel-photo-v1",
+      "approvedAt": "2026-07-11"
+    },
+    {
+      "placeId": "place_021",
+      "name": "제부도&해상케이블카",
+      "file": "place_021.png",
+      "batch": "travel-100",
+      "status": "approved",
+      "generator": "ChatGPT Images",
+      "promptVersion": "korea-travel-photo-v1",
+      "approvedAt": "2026-07-11"
+    },
+    {
+      "placeId": "place_022",
+      "name": "광명동굴",
+      "file": "place_022.png",
+      "batch": "travel-100",
+      "status": "approved",
+      "generator": "ChatGPT Images",
+      "promptVersion": "korea-travel-photo-v1",
+      "approvedAt": "2026-07-11"
+    },
+    {
+      "placeId": "place_023",
+      "name": "설악산국립공원",
+      "file": "place_023.png",
+      "batch": "travel-100",
+      "status": "approved",
+      "generator": "ChatGPT Images",
+      "promptVersion": "korea-travel-photo-v1",
+      "approvedAt": "2026-07-11"
+    },
+    {
+      "placeId": "place_024",
+      "name": "남이섬",
+      "file": "place_024.png",
+      "batch": "travel-100",
+      "status": "approved",
+      "generator": "ChatGPT Images",
+      "promptVersion": "korea-travel-photo-v1",
+      "approvedAt": "2026-07-11"
+    },
+    {
+      "placeId": "place_025",
+      "name": "대관령",
+      "file": "place_025.png",
+      "batch": "travel-100",
+      "status": "approved",
+      "generator": "ChatGPT Images",
+      "promptVersion": "korea-travel-photo-v1",
+      "approvedAt": "2026-07-11"
+    },
+    {
+      "placeId": "place_026",
+      "name": "뮤지엄산&소금산그랜드밸리",
+      "file": "place_026.png",
+      "batch": "travel-100",
+      "status": "approved",
+      "generator": "ChatGPT Images",
+      "promptVersion": "korea-travel-photo-v1",
+      "approvedAt": "2026-07-11"
+    },
+    {
+      "placeId": "place_027",
+      "name": "속초관광수산시장",
+      "file": "place_027.png",
+      "batch": "travel-100",
+      "status": "approved",
+      "generator": "ChatGPT Images",
+      "promptVersion": "korea-travel-photo-v1",
+      "approvedAt": "2026-07-11"
+    },
+    {
+      "placeId": "place_028",
+      "name": "철원 한탄강 주상절리길",
+      "file": "place_028.png",
+      "batch": "travel-100",
+      "status": "approved",
+      "generator": "ChatGPT Images",
+      "promptVersion": "korea-travel-photo-v1",
+      "approvedAt": "2026-07-11"
+    },
+    {
+      "placeId": "place_029",
+      "name": "도째비골 스카이밸리&해랑전망대",
+      "file": "place_029.png",
+      "batch": "travel-100",
+      "status": "approved",
+      "generator": "ChatGPT Images",
+      "promptVersion": "korea-travel-photo-v1",
+      "approvedAt": "2026-07-11"
+    },
+    {
+      "placeId": "place_030",
+      "name": "원대리 자작나무숲",
+      "file": "place_030.png",
+      "batch": "travel-100",
+      "status": "approved",
+      "generator": "ChatGPT Images",
+      "promptVersion": "korea-travel-photo-v1",
+      "approvedAt": "2026-07-11"
+    },
+    {
+      "placeId": "place_031",
+      "name": "무릉계곡&무릉별유천지",
+      "file": "place_031.png",
+      "batch": "travel-100",
+      "status": "approved",
+      "generator": "ChatGPT Images",
+      "promptVersion": "korea-travel-photo-v1",
+      "approvedAt": "2026-07-11"
+    },
+    {
+      "placeId": "place_032",
+      "name": "정동심곡 바다부채길",
+      "file": "place_032.png",
+      "batch": "travel-100",
+      "status": "approved",
+      "generator": "ChatGPT Images",
+      "promptVersion": "korea-travel-photo-v1",
+      "approvedAt": "2026-07-11"
+    },
+    {
+      "placeId": "place_033",
+      "name": "발왕산 천년주목숲길",
+      "file": "place_033.png",
+      "batch": "travel-100",
+      "status": "approved",
+      "generator": "ChatGPT Images",
+      "promptVersion": "korea-travel-photo-v1",
+      "approvedAt": "2026-07-11"
+    },
+    {
+      "placeId": "place_034",
+      "name": "장태산자연휴양림",
+      "file": "place_034.png",
+      "batch": "travel-100",
+      "status": "approved",
+      "generator": "ChatGPT Images",
+      "promptVersion": "korea-travel-photo-v1",
+      "approvedAt": "2026-07-11"
+    },
+    {
+      "placeId": "place_035",
+      "name": "국립세종수목원",
+      "file": "place_035.png",
+      "batch": "travel-100",
+      "status": "approved",
+      "generator": "ChatGPT Images",
+      "promptVersion": "korea-travel-photo-v1",
+      "approvedAt": "2026-07-11"
+    },
+    {
+      "placeId": "place_036",
+      "name": "청남대",
+      "file": "place_036.png",
+      "batch": "travel-100",
+      "status": "approved",
+      "generator": "ChatGPT Images",
+      "promptVersion": "korea-travel-photo-v1",
+      "approvedAt": "2026-07-11"
+    },
+    {
+      "placeId": "place_037",
+      "name": "속리산 법주사&테마파크",
+      "file": "place_037.png",
+      "batch": "travel-100",
+      "status": "approved",
+      "generator": "ChatGPT Images",
+      "promptVersion": "korea-travel-photo-v1",
+      "approvedAt": "2026-07-11"
+    },
+    {
+      "placeId": "place_038",
+      "name": "도담삼봉",
+      "file": "place_038.png",
+      "batch": "travel-100",
+      "status": "approved",
+      "generator": "ChatGPT Images",
+      "promptVersion": "korea-travel-photo-v1",
+      "approvedAt": "2026-07-11"
+    },
+    {
+      "placeId": "place_039",
+      "name": "만천하스카이워크&단양강잔도",
+      "file": "place_039.png",
+      "batch": "travel-100",
+      "status": "approved",
+      "generator": "ChatGPT Images",
+      "promptVersion": "korea-travel-photo-v1",
+      "approvedAt": "2026-07-11"
+    },
+    {
+      "placeId": "place_040",
+      "name": "청풍호",
+      "file": "place_040.png",
+      "batch": "travel-100",
+      "status": "approved",
+      "generator": "ChatGPT Images",
+      "promptVersion": "korea-travel-photo-v1",
+      "approvedAt": "2026-07-11"
+    },
+    {
+      "placeId": "place_041",
+      "name": "공주 백제유적지",
+      "file": "place_041.png",
+      "batch": "travel-100",
+      "status": "approved",
+      "generator": "ChatGPT Images",
+      "promptVersion": "korea-travel-photo-v1",
+      "approvedAt": "2026-07-11"
+    },
+    {
+      "placeId": "place_042",
+      "name": "부여 백제유적지",
+      "file": "place_042.png",
+      "batch": "travel-100",
+      "status": "approved",
+      "generator": "ChatGPT Images",
+      "promptVersion": "korea-travel-photo-v1",
+      "approvedAt": "2026-07-11"
+    },
+    {
+      "placeId": "place_043",
+      "name": "대천해수욕장",
+      "file": "place_043.png",
+      "batch": "travel-100",
+      "status": "approved",
+      "generator": "ChatGPT Images",
+      "promptVersion": "korea-travel-photo-v1",
+      "approvedAt": "2026-07-11"
+    },
+    {
+      "placeId": "place_044",
+      "name": "독립기념관",
+      "file": "place_044.png",
+      "batch": "travel-100",
+      "status": "approved",
+      "generator": "ChatGPT Images",
+      "promptVersion": "korea-travel-photo-v1",
+      "approvedAt": "2026-07-11"
+    },
+    {
+      "placeId": "place_045",
+      "name": "안면도 꽃지해변",
+      "file": "place_045.png",
+      "batch": "travel-100",
+      "status": "approved",
+      "generator": "ChatGPT Images",
+      "promptVersion": "korea-travel-photo-v1",
+      "approvedAt": "2026-07-11"
+    },
+    {
+      "placeId": "place_046",
+      "name": "현충사",
+      "file": "place_046.png",
+      "batch": "travel-100",
+      "status": "approved",
+      "generator": "ChatGPT Images",
+      "promptVersion": "korea-travel-photo-v1",
+      "approvedAt": "2026-07-11"
+    },
+    {
+      "placeId": "place_047",
+      "name": "서산 해미읍성",
+      "file": "place_047.png",
+      "batch": "travel-100",
+      "status": "approved",
+      "generator": "ChatGPT Images",
+      "promptVersion": "korea-travel-photo-v1",
+      "approvedAt": "2026-07-11"
+    },
+    {
+      "placeId": "place_048",
+      "name": "예당관광지",
+      "file": "place_048.png",
+      "batch": "travel-100",
+      "status": "approved",
+      "generator": "ChatGPT Images",
+      "promptVersion": "korea-travel-photo-v1",
+      "approvedAt": "2026-07-11"
+    },
+    {
+      "placeId": "place_049",
+      "name": "무등산국립공원",
+      "file": "place_049.png",
+      "batch": "travel-100",
+      "status": "approved",
+      "generator": "ChatGPT Images",
+      "promptVersion": "korea-travel-photo-v1",
+      "approvedAt": "2026-07-11"
+    },
+    {
+      "placeId": "place_050",
+      "name": "국립아시아문화전당",
+      "file": "place_050.png",
+      "batch": "travel-100",
+      "status": "approved",
+      "generator": "ChatGPT Images",
+      "promptVersion": "korea-travel-photo-v1",
+      "approvedAt": "2026-07-11"
+    },
+    {
+      "placeId": "place_051",
+      "name": "전주 한옥마을",
+      "file": "place_051.png",
+      "batch": "travel-100",
+      "status": "approved",
+      "generator": "ChatGPT Images",
+      "promptVersion": "korea-travel-photo-v1",
+      "approvedAt": "2026-07-11"
+    },
+    {
+      "placeId": "place_052",
+      "name": "마이산도립공원",
+      "file": "place_052.png",
+      "batch": "travel-100",
+      "status": "approved",
+      "generator": "ChatGPT Images",
+      "promptVersion": "korea-travel-photo-v1",
+      "approvedAt": "2026-07-11"
+    },
+    {
+      "placeId": "place_053",
+      "name": "내장산국립공원",
+      "file": "place_053.png",
+      "batch": "travel-100",
+      "status": "approved",
+      "generator": "ChatGPT Images",
+      "promptVersion": "korea-travel-photo-v1",
+      "approvedAt": "2026-07-11"
+    },
+    {
+      "placeId": "place_054",
+      "name": "부안 변산반도",
+      "file": "place_054.png",
+      "batch": "travel-100",
+      "status": "approved",
+      "generator": "ChatGPT Images",
+      "promptVersion": "korea-travel-photo-v1",
+      "approvedAt": "2026-07-11"
+    },
+    {
+      "placeId": "place_055",
+      "name": "강천산군립공원",
+      "file": "place_055.png",
+      "batch": "travel-100",
+      "status": "approved",
+      "generator": "ChatGPT Images",
+      "promptVersion": "korea-travel-photo-v1",
+      "approvedAt": "2026-07-11"
+    },
+    {
+      "placeId": "place_056",
+      "name": "남원관광단지",
+      "file": "place_056.png",
+      "batch": "travel-100",
+      "status": "approved",
+      "generator": "ChatGPT Images",
+      "promptVersion": "korea-travel-photo-v1",
+      "approvedAt": "2026-07-11"
+    },
+    {
+      "placeId": "place_057",
+      "name": "오성한옥마을",
+      "file": "place_057.png",
+      "batch": "travel-100",
+      "status": "approved",
+      "generator": "ChatGPT Images",
+      "promptVersion": "korea-travel-photo-v1",
+      "approvedAt": "2026-07-11"
+    },
+    {
+      "placeId": "place_058",
+      "name": "반디랜드&태권도원",
+      "file": "place_058.png",
+      "batch": "travel-100",
+      "status": "approved",
+      "generator": "ChatGPT Images",
+      "promptVersion": "korea-travel-photo-v1",
+      "approvedAt": "2026-07-11"
+    },
+    {
+      "placeId": "place_059",
+      "name": "순천만국가정원&순천만습지",
+      "file": "place_059.png",
+      "batch": "travel-100",
+      "status": "approved",
+      "generator": "ChatGPT Images",
+      "promptVersion": "korea-travel-photo-v1",
+      "approvedAt": "2026-07-11"
+    },
+    {
+      "placeId": "place_060",
+      "name": "죽녹원&관방제림",
+      "file": "place_060.png",
+      "batch": "travel-100",
+      "status": "approved",
+      "generator": "ChatGPT Images",
+      "promptVersion": "korea-travel-photo-v1",
+      "approvedAt": "2026-07-11"
+    },
+    {
+      "placeId": "place_061",
+      "name": "퍼플섬",
+      "file": "place_061.png",
+      "batch": "travel-100",
+      "status": "approved",
+      "generator": "ChatGPT Images",
+      "promptVersion": "korea-travel-photo-v1",
+      "approvedAt": "2026-07-11"
+    },
+    {
+      "placeId": "place_062",
+      "name": "광양 매화마을&청매실농원",
+      "file": "place_062.png",
+      "batch": "travel-100",
+      "status": "approved",
+      "generator": "ChatGPT Images",
+      "promptVersion": "korea-travel-photo-v1",
+      "approvedAt": "2026-07-11"
+    },
+    {
+      "placeId": "place_063",
+      "name": "여수 엑스포해양공원",
+      "file": "place_063.png",
+      "batch": "travel-100",
+      "status": "approved",
+      "generator": "ChatGPT Images",
+      "promptVersion": "korea-travel-photo-v1",
+      "approvedAt": "2026-07-11"
+    },
+    {
+      "placeId": "place_064",
+      "name": "목포근대역사공간&해상케이블카",
+      "file": "place_064.png",
+      "batch": "travel-100",
+      "status": "approved",
+      "generator": "ChatGPT Images",
+      "promptVersion": "korea-travel-photo-v1",
+      "approvedAt": "2026-07-11"
+    },
+    {
+      "placeId": "place_065",
+      "name": "섬진강기차마을",
+      "file": "place_065.png",
+      "batch": "travel-100",
+      "status": "approved",
+      "generator": "ChatGPT Images",
+      "promptVersion": "korea-travel-photo-v1",
+      "approvedAt": "2026-07-11"
+    },
+    {
+      "placeId": "place_066",
+      "name": "정남진 편백숲 우드랜드",
+      "file": "place_066.png",
+      "batch": "travel-100",
+      "status": "approved",
+      "generator": "ChatGPT Images",
+      "promptVersion": "korea-travel-photo-v1",
+      "approvedAt": "2026-07-11"
+    },
+    {
+      "placeId": "place_067",
+      "name": "광안리해변&SUP존",
+      "file": "place_067.png",
+      "batch": "travel-100",
+      "status": "approved",
+      "generator": "ChatGPT Images",
+      "promptVersion": "korea-travel-photo-v1",
+      "approvedAt": "2026-07-11"
+    },
+    {
+      "placeId": "place_068",
+      "name": "해운대&송정해수욕장",
+      "file": "place_068.png",
+      "batch": "travel-100",
+      "status": "approved",
+      "generator": "ChatGPT Images",
+      "promptVersion": "korea-travel-photo-v1",
+      "approvedAt": "2026-07-11"
+    },
+    {
+      "placeId": "place_069",
+      "name": "태종대유원지",
+      "file": "place_069.png",
+      "batch": "travel-100",
+      "status": "approved",
+      "generator": "ChatGPT Images",
+      "promptVersion": "korea-travel-photo-v1",
+      "approvedAt": "2026-07-11"
+    },
+    {
+      "placeId": "place_070",
+      "name": "해동용궁사&오시리아관광단지",
+      "file": "place_070.png",
+      "batch": "travel-100",
+      "status": "approved",
+      "generator": "ChatGPT Images",
+      "promptVersion": "korea-travel-photo-v1",
+      "approvedAt": "2026-07-11"
+    },
+    {
+      "placeId": "place_071",
+      "name": "감천문화마을",
+      "file": "place_071.png",
+      "batch": "travel-100",
+      "status": "approved",
+      "generator": "ChatGPT Images",
+      "promptVersion": "korea-travel-photo-v1",
+      "approvedAt": "2026-07-11"
+    },
+    {
+      "placeId": "place_072",
+      "name": "부산엑스더스카이&그린레일웨이",
+      "file": "place_072.png",
+      "batch": "travel-100",
+      "status": "approved",
+      "generator": "ChatGPT Images",
+      "promptVersion": "korea-travel-photo-v1",
+      "approvedAt": "2026-07-11"
+    },
+    {
+      "placeId": "place_073",
+      "name": "태화강국가정원",
+      "file": "place_073.png",
+      "batch": "travel-100",
+      "status": "approved",
+      "generator": "ChatGPT Images",
+      "promptVersion": "korea-travel-photo-v1",
+      "approvedAt": "2026-07-11"
+    },
+    {
+      "placeId": "place_074",
+      "name": "영남알프스 간월재",
+      "file": "place_074.png",
+      "batch": "travel-100",
+      "status": "approved",
+      "generator": "ChatGPT Images",
+      "promptVersion": "korea-travel-photo-v1",
+      "approvedAt": "2026-07-11"
+    },
+    {
+      "placeId": "place_075",
+      "name": "대왕암공원",
+      "file": "place_075.png",
+      "batch": "travel-100",
+      "status": "approved",
+      "generator": "ChatGPT Images",
+      "promptVersion": "korea-travel-photo-v1",
+      "approvedAt": "2026-07-11"
+    },
+    {
+      "placeId": "place_076",
+      "name": "통도사",
+      "file": "place_076.png",
+      "batch": "travel-100",
+      "status": "approved",
+      "generator": "ChatGPT Images",
+      "promptVersion": "korea-travel-photo-v1",
+      "approvedAt": "2026-07-11"
+    },
+    {
+      "placeId": "place_077",
+      "name": "남해 독일마을",
+      "file": "place_077.png",
+      "batch": "travel-100",
+      "status": "approved",
+      "generator": "ChatGPT Images",
+      "promptVersion": "korea-travel-photo-v1",
+      "approvedAt": "2026-07-11"
+    },
+    {
+      "placeId": "place_078",
+      "name": "진주성",
+      "file": "place_078.png",
+      "batch": "travel-100",
+      "status": "approved",
+      "generator": "ChatGPT Images",
+      "promptVersion": "korea-travel-photo-v1",
+      "approvedAt": "2026-07-11"
+    },
+    {
+      "placeId": "place_079",
+      "name": "거제식물원",
+      "file": "place_079.png",
+      "batch": "travel-100",
+      "status": "approved",
+      "generator": "ChatGPT Images",
+      "promptVersion": "korea-travel-photo-v1",
+      "approvedAt": "2026-07-11"
+    },
+    {
+      "placeId": "place_080",
+      "name": "지리산 쌍계사&화개장터",
+      "file": "place_080.png",
+      "batch": "travel-100",
+      "status": "approved",
+      "generator": "ChatGPT Images",
+      "promptVersion": "korea-travel-photo-v1",
+      "approvedAt": "2026-07-11"
+    },
+    {
+      "placeId": "place_081",
+      "name": "우포늪",
+      "file": "place_081.png",
+      "batch": "travel-100",
+      "status": "approved",
+      "generator": "ChatGPT Images",
+      "promptVersion": "korea-travel-photo-v1",
+      "approvedAt": "2026-07-11"
+    },
+    {
+      "placeId": "place_082",
+      "name": "사천바다케이블카&아라마루 아쿠아리움",
+      "file": "place_082.png",
+      "batch": "travel-100",
+      "status": "approved",
+      "generator": "ChatGPT Images",
+      "promptVersion": "korea-travel-photo-v1",
+      "approvedAt": "2026-07-11"
+    },
+    {
+      "placeId": "place_083",
+      "name": "산청 동의보감촌",
+      "file": "place_083.png",
+      "batch": "travel-100",
+      "status": "approved",
+      "generator": "ChatGPT Images",
+      "promptVersion": "korea-travel-photo-v1",
+      "approvedAt": "2026-07-11"
+    },
+    {
+      "placeId": "place_084",
+      "name": "통영 디피랑",
+      "file": "place_084.png",
+      "batch": "travel-100",
+      "status": "approved",
+      "generator": "ChatGPT Images",
+      "promptVersion": "korea-travel-photo-v1",
+      "approvedAt": "2026-07-11"
+    },
+    {
+      "placeId": "place_085",
+      "name": "서문시장&동성로",
+      "file": "place_085.png",
+      "batch": "travel-100",
+      "status": "approved",
+      "generator": "ChatGPT Images",
+      "promptVersion": "korea-travel-photo-v1",
+      "approvedAt": "2026-07-11"
+    },
+    {
+      "placeId": "place_086",
+      "name": "팔공산",
+      "file": "place_086.png",
+      "batch": "travel-100",
+      "status": "approved",
+      "generator": "ChatGPT Images",
+      "promptVersion": "korea-travel-photo-v1",
+      "approvedAt": "2026-07-11"
+    },
+    {
+      "placeId": "place_087",
+      "name": "사유원",
+      "file": "place_087.png",
+      "batch": "travel-100",
+      "status": "approved",
+      "generator": "ChatGPT Images",
+      "promptVersion": "korea-travel-photo-v1",
+      "approvedAt": "2026-07-11"
+    },
+    {
+      "placeId": "place_088",
+      "name": "경주 대릉원&황리단길&월정교",
+      "file": "place_088.png",
+      "batch": "travel-100",
+      "status": "approved",
+      "generator": "ChatGPT Images",
+      "promptVersion": "korea-travel-photo-v1",
+      "approvedAt": "2026-07-11"
+    },
+    {
+      "placeId": "place_089",
+      "name": "불국사&석굴암",
+      "file": "place_089.png",
+      "batch": "travel-100",
+      "status": "approved",
+      "generator": "ChatGPT Images",
+      "promptVersion": "korea-travel-photo-v1",
+      "approvedAt": "2026-07-11"
+    },
+    {
+      "placeId": "place_090",
+      "name": "울릉도",
+      "file": "place_090.png",
+      "batch": "travel-100",
+      "status": "approved",
+      "generator": "ChatGPT Images",
+      "promptVersion": "korea-travel-photo-v1",
+      "approvedAt": "2026-07-11"
+    },
+    {
+      "placeId": "place_091",
+      "name": "안동하회마을",
+      "file": "place_091.png",
+      "batch": "travel-100",
+      "status": "approved",
+      "generator": "ChatGPT Images",
+      "promptVersion": "korea-travel-photo-v1",
+      "approvedAt": "2026-07-11"
+    },
+    {
+      "placeId": "place_092",
+      "name": "주왕산&주산지",
+      "file": "place_092.png",
+      "batch": "travel-100",
+      "status": "approved",
+      "generator": "ChatGPT Images",
+      "promptVersion": "korea-travel-photo-v1",
+      "approvedAt": "2026-07-11"
+    },
+    {
+      "placeId": "place_093",
+      "name": "국립백두대간수목원",
+      "file": "place_093.png",
+      "batch": "travel-100",
+      "status": "approved",
+      "generator": "ChatGPT Images",
+      "promptVersion": "korea-travel-photo-v1",
+      "approvedAt": "2026-07-11"
+    },
+    {
+      "placeId": "place_094",
+      "name": "포항 스페이스워크",
+      "file": "place_094.png",
+      "batch": "travel-100",
+      "status": "approved",
+      "generator": "ChatGPT Images",
+      "promptVersion": "korea-travel-photo-v1",
+      "approvedAt": "2026-07-11"
+    },
+    {
+      "placeId": "place_095",
+      "name": "한라산국립공원",
+      "file": "place_095.png",
+      "batch": "travel-100",
+      "status": "approved",
+      "generator": "ChatGPT Images",
+      "promptVersion": "korea-travel-photo-v1",
+      "approvedAt": "2026-07-11"
+    },
+    {
+      "placeId": "place_096",
+      "name": "성산일출봉",
+      "file": "place_096.png",
+      "batch": "travel-100",
+      "status": "approved",
+      "generator": "ChatGPT Images",
+      "promptVersion": "korea-travel-photo-v1",
+      "approvedAt": "2026-07-11"
+    },
+    {
+      "placeId": "place_097",
+      "name": "제주올레길",
+      "file": "place_097.png",
+      "batch": "travel-100",
+      "status": "approved",
+      "generator": "ChatGPT Images",
+      "promptVersion": "korea-travel-photo-v1",
+      "approvedAt": "2026-07-11"
+    },
+    {
+      "placeId": "place_098",
+      "name": "우도",
+      "file": "place_098.png",
+      "batch": "travel-100",
+      "status": "approved",
+      "generator": "ChatGPT Images",
+      "promptVersion": "korea-travel-photo-v1",
+      "approvedAt": "2026-07-11"
+    },
+    {
+      "placeId": "place_099",
+      "name": "비자림",
+      "file": "place_099.png",
+      "batch": "travel-100",
+      "status": "approved",
+      "generator": "ChatGPT Images",
+      "promptVersion": "korea-travel-photo-v1",
+      "approvedAt": "2026-07-11"
+    },
+    {
+      "placeId": "place_100",
+      "name": "제주 머체왓숲길",
+      "file": "place_100.png",
+      "batch": "travel-100",
+      "status": "approved",
+      "generator": "ChatGPT Images",
+      "promptVersion": "korea-travel-photo-v1",
+      "approvedAt": "2026-07-11"
+    }
+  ],
+  "reviewedAt": "2026-07-11",
+  "reviewStatus": "approved"
+}
