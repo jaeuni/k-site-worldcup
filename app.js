@@ -321,17 +321,48 @@ function restartGame() {
   render();
 }
 
+function originalImagePath(place) {
+  return place.imagePath || `/images/places/${place.id}.png`;
+}
+
+function imageVariantPath(place, variant = "main") {
+  const originalPath = originalImagePath(place);
+  const match = originalPath.match(/^(.*\/)places\/([^/?]+)\.[^/?]+(?:\?.*)?$/);
+  if (!match) return originalPath;
+
+  const folder = {
+    main: "optimized",
+    thumbnail: "thumbnails",
+    map: "map-thumbs"
+  }[variant] || "optimized";
+
+  return `${match[1]}${folder}/${match[2]}.webp`;
+}
+
+function renderResponsiveImage(place, { variant = "main", className, alt, loading = "lazy", fetchPriority = "" }) {
+  const priority = fetchPriority ? ` fetchpriority="${fetchPriority}"` : "";
+  return `
+    <img
+      class="${className}"
+      src="${escapeHtml(imageVariantPath(place, variant))}"
+      data-fallback-src="${escapeHtml(originalImagePath(place))}"
+      alt="${escapeHtml(alt)}"
+      loading="${loading}"
+      decoding="async"${priority}
+    />
+  `;
+}
+
 function renderPlaceArt(place, size = "large") {
   if (place.imagePath) {
-    return `
-      <img
-        class="place-art place-art-${size} place-photo"
-        src="${escapeHtml(place.imagePath)}"
-        alt="${escapeHtml(place.name)} 실사 이미지"
-        loading="${size === "hero" || size === "match" ? "eager" : "lazy"}"
-        decoding="async"
-      />
-    `;
+    const isSmallArt = size === "grid" || size === "mini";
+    return renderResponsiveImage(place, {
+      variant: isSmallArt ? "thumbnail" : "main",
+      className: `place-art place-art-${size} place-photo`,
+      alt: `${place.name} 실사 이미지`,
+      loading: size === "hero" || size === "match" || size === "winner" ? "eager" : "lazy",
+      fetchPriority: size === "hero" || size === "match" ? "high" : ""
+    });
   }
 
   const baseShapes = {
@@ -402,10 +433,6 @@ function getMapPosition(place) {
     x: Math.min(98, Math.max(2, x)),
     y: Math.min(98, Math.max(2, y))
   };
-}
-
-function mapImagePath(place) {
-  return place.imagePath || `/images/places/${place.id}.png`;
 }
 
 function mapPinClasses(place) {
@@ -717,14 +744,24 @@ function renderMapPin(place) {
       aria-pressed="${selected}"
     >
       <span class="map-pin-core"></span>
-      <span class="map-pin-tooltip" role="tooltip">
-        <img src="${escapeHtml(mapImagePath(place))}" alt="${escapeHtml(place.name)} 미리보기" loading="lazy" decoding="async" />
-        <span class="map-tooltip-copy">
-          <span>${escapeHtml(place.region)} · ${escapeHtml(place.category)}</span>
-          <strong>${escapeHtml(place.name)}</strong>
-          <span>${renderSeasonMark(place.season)}</span>
-        </span>
-      </span>
+      ${
+        selected
+          ? `
+            <span class="map-pin-tooltip" role="tooltip">
+              ${renderResponsiveImage(place, {
+                variant: "map",
+                className: "map-pin-photo",
+                alt: `${place.name} 미리보기`
+              })}
+              <span class="map-tooltip-copy">
+                <span>${escapeHtml(place.region)} · ${escapeHtml(place.category)}</span>
+                <strong>${escapeHtml(place.name)}</strong>
+                <span>${renderSeasonMark(place.season)}</span>
+              </span>
+            </span>
+          `
+          : ""
+      }
     </button>
   `;
 }
@@ -845,7 +882,11 @@ function renderMetroZoom() {
         selected
           ? `
             <div class="metro-zoom-selection" aria-live="polite">
-              <img src="${escapeHtml(mapImagePath(selected))}" alt="${escapeHtml(selected.name)} 미리보기" />
+              ${renderResponsiveImage(selected, {
+                variant: "thumbnail",
+                className: "metro-zoom-photo",
+                alt: `${selected.name} 미리보기`
+              })}
               <span>
                 <small>${escapeHtml(selected.category)} · ${renderSeasonMark(selected.season)}</small>
                 <strong>${escapeHtml(selected.name)}</strong>
@@ -1157,6 +1198,32 @@ document.addEventListener("change", (event) => {
   state.mapZoomRegion = null;
   render();
 });
+
+document.addEventListener("pointerover", (event) => {
+  if (event.pointerType !== "mouse" || state.view !== "map") return;
+  const pin = event.target.closest("[data-map-place]");
+  if (!pin || state.mapSelectedId === pin.dataset.mapPlace) return;
+  state.mapSelectedId = pin.dataset.mapPlace;
+  render();
+});
+
+document.addEventListener(
+  "error",
+  (event) => {
+    const image = event.target;
+    if (!(image instanceof HTMLImageElement)) return;
+
+    const fallback = image.dataset.fallbackSrc;
+    if (fallback) {
+      delete image.dataset.fallbackSrc;
+      image.src = fallback;
+      return;
+    }
+
+    image.classList.add("is-image-unavailable");
+  },
+  true
+);
 
 document.addEventListener("keydown", async (event) => {
   if (event.key === "Escape" && state.hiddenItemOpen) {
