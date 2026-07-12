@@ -1595,6 +1595,96 @@ code {
   color: var(--pin-color);
 }
 
+.metro-zoom-pin-tooltip {
+  display: grid;
+  position: absolute;
+  z-index: 6;
+  bottom: calc(100% + 10px);
+  left: 50%;
+  grid-template-columns: 76px minmax(110px, 1fr);
+  width: 208px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 7px;
+  background: #fff;
+  box-shadow: var(--shadow-strong);
+  color: var(--ink);
+  opacity: 0;
+  pointer-events: none;
+  text-align: left;
+  transform: translate(-50%, 5px);
+  transition:
+    opacity 150ms ease,
+    transform 150ms ease;
+}
+
+.metro-zoom-pin-tooltip img {
+  width: 76px;
+  height: 76px;
+  object-fit: cover;
+}
+
+.metro-zoom-tooltip-copy {
+  display: grid;
+  align-content: center;
+  gap: 5px;
+  min-width: 0;
+  padding: 9px 10px;
+}
+
+.metro-zoom-tooltip-copy > span {
+  color: var(--leaf);
+  font-size: 9px;
+  font-weight: 900;
+}
+
+.metro-zoom-tooltip-copy .season-mark {
+  width: max-content;
+  margin-left: 2px;
+}
+
+.metro-zoom-tooltip-copy strong {
+  overflow-wrap: anywhere;
+  color: var(--ink);
+  font-size: 13px;
+  line-height: 1.25;
+}
+
+.metro-zoom-pin:hover .metro-zoom-pin-tooltip,
+.metro-zoom-pin:focus-visible .metro-zoom-pin-tooltip,
+.metro-zoom-pin.is-selected .metro-zoom-pin-tooltip {
+  opacity: 1;
+  transform: translate(-50%, 0);
+}
+
+.metro-zoom-pin.is-edge-left .metro-zoom-pin-tooltip {
+  left: -12px;
+  transform: translate(0, 5px);
+}
+
+.metro-zoom-pin.is-edge-left:hover .metro-zoom-pin-tooltip,
+.metro-zoom-pin.is-edge-left:focus-visible .metro-zoom-pin-tooltip,
+.metro-zoom-pin.is-edge-left.is-selected .metro-zoom-pin-tooltip {
+  transform: translate(0, 0);
+}
+
+.metro-zoom-pin.is-edge-right .metro-zoom-pin-tooltip {
+  right: -12px;
+  left: auto;
+  transform: translate(0, 5px);
+}
+
+.metro-zoom-pin.is-edge-right:hover .metro-zoom-pin-tooltip,
+.metro-zoom-pin.is-edge-right:focus-visible .metro-zoom-pin-tooltip,
+.metro-zoom-pin.is-edge-right.is-selected .metro-zoom-pin-tooltip {
+  transform: translate(0, 0);
+}
+
+.metro-zoom-pin.is-near-top .metro-zoom-pin-tooltip {
+  top: calc(100% + 10px);
+  bottom: auto;
+}
+
 .metro-zoom-selection {
   display: grid;
   grid-template-columns: 84px minmax(0, 1fr);
@@ -1967,6 +2057,16 @@ code {
     font-size: 8px;
   }
 
+  .metro-zoom-pin-tooltip {
+    grid-template-columns: 66px minmax(96px, 1fr);
+    width: 182px;
+  }
+
+  .metro-zoom-pin-tooltip img {
+    width: 66px;
+    height: 66px;
+  }
+
   .map-legend {
     padding: 24px 0 10px;
     background: transparent;
@@ -2138,6 +2238,29 @@ code {
 
   .metro-zoom-canvas {
     min-height: 250px;
+  }
+
+  .metro-zoom-pin-tooltip {
+    grid-template-columns: 58px minmax(88px, 1fr);
+    width: 166px;
+  }
+
+  .metro-zoom-pin-tooltip img {
+    width: 58px;
+    height: 58px;
+  }
+
+  .metro-zoom-tooltip-copy {
+    gap: 3px;
+    padding: 7px 8px;
+  }
+
+  .metro-zoom-tooltip-copy > span {
+    font-size: 8px;
+  }
+
+  .metro-zoom-tooltip-copy strong {
+    font-size: 11px;
   }
 
   .metro-zoom-selection,

@@ -831,9 +831,12 @@ function renderMetroZoomPin(place, places) {
   const { x, y } = getMetroZoomPosition(place, places);
   const color = REGION_CONFIG[place.region]?.color || "#187A6A";
   const selected = state.mapSelectedId === place.id;
+  const positionClasses = [x < 30 ? "is-edge-left" : "", x > 70 ? "is-edge-right" : "", y < 35 ? "is-near-top" : ""]
+    .filter(Boolean)
+    .join(" ");
   return `
     <button
-      class="metro-zoom-pin ${selected ? "is-selected" : ""}"
+      class="metro-zoom-pin ${selected ? "is-selected" : ""} ${positionClasses}"
       type="button"
       data-map-place="${escapeHtml(place.id)}"
       style="--zoom-x:${x.toFixed(2)}%;--zoom-y:${y.toFixed(2)}%;--pin-color:${color}"
@@ -842,6 +845,17 @@ function renderMetroZoomPin(place, places) {
     >
       <span class="metro-zoom-pin-core"></span>
       <span class="metro-zoom-pin-name">${escapeHtml(place.name)}</span>
+      <span class="metro-zoom-pin-tooltip" role="tooltip">
+        ${renderResponsiveImage(place, {
+          variant: "map",
+          className: "metro-zoom-pin-photo",
+          alt: `${place.name} 미리보기`
+        })}
+        <span class="metro-zoom-tooltip-copy">
+          <span>${escapeHtml(place.category)} · ${renderSeasonMark(place.season)}</span>
+          <strong>${escapeHtml(place.name)}</strong>
+        </span>
+      </span>
     </button>
   `;
 }
