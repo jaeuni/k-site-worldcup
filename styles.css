@@ -262,6 +262,81 @@ button {
   font-size: 16px;
 }
 
+.tournament-options {
+  display: grid;
+  max-width: 590px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+  margin-top: 28px;
+}
+
+.tournament-option {
+  position: relative;
+  display: flex;
+  min-height: 100px;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: center;
+  padding: 16px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fff;
+  color: var(--ink);
+  cursor: pointer;
+  text-align: left;
+  transition: border-color 150ms ease, box-shadow 150ms ease, transform 150ms ease;
+}
+
+.tournament-option:hover {
+  border-color: var(--tomato);
+  box-shadow: 0 10px 25px rgba(23, 32, 30, 0.12);
+  transform: translateY(-2px);
+}
+
+.tournament-option:focus-visible {
+  outline: 3px solid var(--saffron);
+  outline-offset: 3px;
+}
+
+.tournament-option strong {
+  font-size: 22px;
+  font-weight: 950;
+}
+
+.tournament-option small {
+  margin-top: 7px;
+  color: var(--muted);
+  font-size: 11px;
+  font-weight: 750;
+}
+
+.tournament-option > span {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  padding: 3px 6px;
+  border-radius: 999px;
+  background: var(--tomato);
+  color: #fff;
+  font-size: 9px;
+  font-weight: 900;
+}
+
+.tournament-option.is-recommended {
+  border: 2px solid var(--tomato);
+  background: color-mix(in srgb, var(--tomato) 6%, #fff);
+}
+
+@media (max-width: 620px) {
+  .tournament-options {
+    grid-template-columns: 1fr;
+  }
+
+  .tournament-option {
+    min-height: 76px;
+  }
+}
+
 .setup-visual {
   position: relative;
   min-width: 0;

@@ -1,5 +1,6 @@
 const STORAGE_STATS_KEY = "korea-travel-worldcup:stats:v1";
 const TOURNAMENT_SIZE = 64;
+const TOURNAMENT_SIZES = [16, 32, 64];
 const DOKDO_TRIGGER_WINNER_ID = "place_090";
 const DOKDO_DISCOVERY_RATE = 0.1;
 const DOKDO_HIDDEN_ITEM = {
@@ -88,6 +89,7 @@ const state = {
   places: [],
   stats: emptyStats(),
   game: null,
+  tournamentSize: 32,
   category: "전체",
   season: "전체",
   mapRegion: "전체",
@@ -215,10 +217,13 @@ function roundLabel(size) {
   return `${size}강`;
 }
 
-function startGame() {
-  const entrants = shuffle(state.places).slice(0, TOURNAMENT_SIZE);
+function startGame(size = state.tournamentSize) {
+  const tournamentSize = TOURNAMENT_SIZES.includes(Number(size)) ? Number(size) : 32;
+  state.tournamentSize = tournamentSize;
+  const entrants = shuffle(state.places).slice(0, tournamentSize);
   state.game = {
     id: createGameId(),
+    initialSize: tournamentSize,
     roundSize: entrants.length,
     currentRound: entrants,
     nextRound: [],
@@ -481,11 +486,12 @@ function renderSetup() {
         <div class="setup-copy">
           <span class="eyebrow">KOREA TRAVEL TOURNAMENT</span>
           <h1>당신의 최애 여행지는<br />어디까지 살아남을까요?</h1>
-          <p>궁궐과 골목, 산과 바다, 도시의 야경까지 전국 ${state.places.length.toLocaleString("ko-KR")}곳 중 64곳이 무작위로 출전합니다.</p>
-          <button class="primary-button start-button" type="button" data-action="start-game">
-            64강 시작
-            <span aria-hidden="true">→</span>
-          </button>
+          <p>궁궐과 골목, 산과 바다, 도시의 야경까지 전국 ${state.places.length.toLocaleString("ko-KR")}곳 중 원하는 경기 규모를 골라 시작하세요.</p>
+          <div class="tournament-options" role="group" aria-label="토너먼트 규모 선택">
+            <button class="tournament-option" type="button" data-tournament-size="16"><strong>16강</strong><small>빠르게 · 15번 선택</small></button>
+            <button class="tournament-option is-recommended" type="button" data-tournament-size="32"><span>추천</span><strong>32강</strong><small>적당하게 · 31번 선택</small></button>
+            <button class="tournament-option" type="button" data-tournament-size="64"><strong>64강</strong><small>깊이 있게 · 63번 선택</small></button>
+          </div>
         </div>
         <div class="setup-visual" aria-hidden="true">
           ${renderPlaceArt(state.places[0], "hero")}
@@ -627,7 +633,7 @@ function renderResult() {
       }
       ${state.message ? `<div class="notice" role="alert">${escapeHtml(state.message)}</div>` : ""}
       <div class="result-actions">
-        <button class="primary-button" type="button" data-action="restart-game">다시 64강</button>
+        <button class="primary-button" type="button" data-action="restart-game">다시 ${state.game?.initialSize || state.tournamentSize}강</button>
         <button class="secondary-button" type="button" data-view="places">후보 둘러보기</button>
       </div>
     </main>
@@ -1157,6 +1163,11 @@ document.addEventListener("click", async (event) => {
 
   if (button.dataset.pick) {
     await choosePlace(button.dataset.pick);
+    return;
+  }
+
+  if (button.dataset.tournamentSize) {
+    startGame(button.dataset.tournamentSize);
     return;
   }
 
