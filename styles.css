@@ -326,18 +326,19 @@ button {
   border: 2px solid var(--tomato);
   background: color-mix(in srgb, var(--tomato) 6%, #fff);
 }
-+
 .daily-challenge {
-  display: grid;
+  position: relative;
+  display: flex;
   width: 100%;
   max-width: 590px;
-  grid-template-columns: 1fr auto;
-  gap: 3px 14px;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 6px;
   margin-top: 12px;
-  padding: 16px 18px;
+  padding: 18px 132px 18px 20px;
   border: 1px solid var(--leaf);
   border-radius: 8px;
-  background: var(--ink);
+  background: #17201e;
   color: #fff;
   cursor: pointer;
   text-align: left;
@@ -355,23 +356,35 @@ button {
 }
 
 .daily-challenge > span {
-  grid-column: 2;
-  grid-row: 1 / span 2;
-  align-self: center;
-  color: var(--saffron);
+  position: absolute;
+  top: 50%;
+  right: 18px;
+  padding: 5px 8px;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.1);
+  color: #ffd166;
   font-size: 10px;
   font-weight: 900;
+  line-height: 1.2;
+  transform: translateY(-50%);
+  white-space: nowrap;
 }
 
 .daily-challenge strong {
+  display: block;
+  color: #fff;
   font-size: 18px;
   font-weight: 950;
+  line-height: 1.25;
 }
 
 .daily-challenge small {
+  display: block;
   color: rgba(255, 255, 255, 0.72);
   font-size: 11px;
   font-weight: 700;
+  line-height: 1.45;
 }
 
 .daily-comparison {
@@ -423,6 +436,16 @@ button {
 }
 
 @media (max-width: 620px) {
+  .daily-challenge {
+    padding: 17px 18px;
+  }
+
+  .daily-challenge > span {
+    position: static;
+    order: -1;
+    transform: none;
+  }
+
   .daily-metrics {
     grid-template-columns: 1fr;
   }
