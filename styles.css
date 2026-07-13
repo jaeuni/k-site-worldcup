@@ -132,6 +132,11 @@ button {
   font-weight: 850;
 }
 
+.hub-link {
+  text-decoration: none;
+  white-space: nowrap;
+}
+
 .nav-tab.is-active {
   background: var(--ink);
   color: #fff;

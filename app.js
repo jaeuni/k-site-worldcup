@@ -463,6 +463,7 @@ function renderHeader() {
         </span>
       </button>
       <nav class="nav-tabs" aria-label="주요 메뉴">
+        <a class="nav-tab hub-link" href="https://k-worldcup-hub.netlify.app/" aria-label="전체 월드컵 게임으로 돌아가기">← 전체 게임</a>
         <button class="nav-tab ${state.view === "game" ? "is-active" : ""}" type="button" data-view="game">게임</button>
         <button class="nav-tab ${state.view === "places" ? "is-active" : ""}" type="button" data-view="places">후보 ${state.places.length || TOURNAMENT_SIZE}</button>
         <button class="nav-tab ${state.view === "map" ? "is-active" : ""}" type="button" data-view="map">관광지도</button>
