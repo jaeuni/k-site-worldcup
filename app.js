@@ -90,6 +90,7 @@ const state = {
   stats: emptyStats(),
   game: null,
   tournamentSize: 32,
+  dailyStats: null,
   category: "전체",
   season: "전체",
   mapRegion: "전체",
@@ -187,6 +188,52 @@ function shuffle(items) {
   return result;
 }
 
+function dailyDateKey() {
+  return new Intl.DateTimeFormat("en-CA", { timeZone: "Asia/Seoul" }).format(new Date());
+}
+
+function seededShuffle(items, seedText) {
+  let seed = 2166136261;
+  for (const character of seedText) { seed ^= character.charCodeAt(0); seed = Math.imul(seed, 16777619); }
+  const random = () => { seed += 0x6d2b79f5; let value = seed; value = Math.imul(value ^ (value >>> 15), value | 1); value ^= value + Math.imul(value ^ (value >>> 7), value | 61); return ((value ^ (value >>> 14)) >>> 0) / 4294967296; };
+  const result = [...items];
+  for (let index = result.length - 1; index > 0; index -= 1) { const swapIndex = Math.floor(random() * (index + 1)); [result[index], result[swapIndex]] = [result[swapIndex], result[index]]; }
+  return result;
+}
+
+function startDailyGame() {
+  const date = dailyDateKey();
+  const entrants = seededShuffle(state.places, `k-site:${date}`).slice(0, 16);
+  state.dailyStats = null;
+  state.game = { id: createGameId(), mode: "daily", date, initialSize: 16, roundSize: 16, currentRound: entrants, nextRound: [], matchCursor: 0, completedMatches: 0, totalMatches: 15, winner: null, choices: [], dokdoDiscovery: null };
+  state.screen = "match";
+  state.selecting = false;
+  window.scrollTo({ top: 0, behavior: "smooth" });
+  render();
+}
+
+async function recordDailyResult(winner) {
+  try {
+    const response = await fetch("/api/daily-sixteen", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ date: state.game.date, gameId: state.game.id, winnerId: winner.id, choices: state.game.choices }) });
+    if (!response.ok) throw new Error();
+    state.dailyStats = await response.json();
+  } catch { state.dailyStats = { unavailable: true }; }
+  render();
+}
+
+function renderDailyComparison(winner) {
+  if (state.game?.mode !== "daily") return "";
+  if (!state.dailyStats) return `<section class="daily-comparison"><p>오늘의 선택 통계를 집계하고 있습니다…</p></section>`;
+  if (state.dailyStats.unavailable) return `<section class="daily-comparison"><p>게임은 정상 완료됐지만 통계 서비스에 잠시 연결할 수 없습니다.</p></section>`;
+  const total = state.dailyStats.totalGames || 0;
+  const winnerRate = total ? Math.round(((state.dailyStats.winnerCounts?.[winner.id] || 0) / total) * 100) : 0;
+  let compared = 0;
+  let agreed = 0;
+  for (const choice of state.game.choices) { const pair = [choice.leftId, choice.rightId].sort(); const match = state.dailyStats.matchCounts?.[`${choice.roundSize}:${pair[0]}:${pair[1]}`]; if (!match?.total) continue; compared += 1; const majority = Object.entries(match.picks).sort((a, b) => b[1] - a[1])[0]?.[0]; if (majority === choice.winnerId) agreed += 1; }
+  const agreement = compared ? Math.round((agreed / compared) * 100) : 0;
+  return `<section class="daily-comparison"><span class="eyebrow">TODAY'S COMPARISON</span><h2>오늘의 취향 비교</h2><div class="daily-metrics"><div><strong>${total}</strong><span>오늘 완주</span></div><div><strong>${winnerRate}%</strong><span>${escapeHtml(winner.name)} 우승 선택</span></div><div><strong>${agreement}%</strong><span>전체 선택과 일치</span></div></div></section>`;
+}
+
 function createGameId() {
   if (globalThis.crypto?.randomUUID) return globalThis.crypto.randomUUID();
   return `place-${Date.now()}-${Math.random().toString(16).slice(2)}`;
@@ -252,6 +299,7 @@ async function choosePlace(placeId) {
   if (!winner) return;
 
   state.selecting = true;
+  if (state.game.mode === "daily") state.game.choices.push({ roundSize: state.game.roundSize, leftId: pair[0].id, rightId: pair[1].id, winnerId: winner.id });
   state.game.nextRound.push(winner);
   state.game.completedMatches += 1;
   const roundFinished = state.game.matchCursor + 2 >= state.game.currentRound.length;
@@ -271,10 +319,11 @@ async function choosePlace(placeId) {
     state.selecting = false;
     render();
     await recordResult(winner);
+    if (state.game.mode === "daily") await recordDailyResult(winner);
     return;
   }
 
-  state.game.currentRound = shuffle(state.game.nextRound);
+  state.game.currentRound = state.game.mode === "daily" ? [...state.game.nextRound] : shuffle(state.game.nextRound);
   state.game.roundSize = state.game.currentRound.length;
   state.game.nextRound = [];
   state.game.matchCursor = 0;
@@ -492,6 +541,7 @@ function renderSetup() {
             <button class="tournament-option is-recommended" type="button" data-tournament-size="32"><span>추천</span><strong>32강</strong><small>적당하게 · 31번 선택</small></button>
             <button class="tournament-option" type="button" data-tournament-size="64"><strong>64강</strong><small>깊이 있게 · 63번 선택</small></button>
           </div>
+          <button class="daily-challenge" type="button" data-action="start-daily"><span>매일 자정 갱신</span><strong>오늘의 16강</strong><small>모두 같은 후보 · 완료 후 취향 통계 비교</small></button>
         </div>
         <div class="setup-visual" aria-hidden="true">
           ${renderPlaceArt(state.places[0], "hero")}
@@ -632,6 +682,7 @@ function renderResult() {
           : ""
       }
       ${state.message ? `<div class="notice" role="alert">${escapeHtml(state.message)}</div>` : ""}
+      ${renderDailyComparison(winner)}
       <div class="result-actions">
         <button class="primary-button" type="button" data-action="restart-game">다시 ${state.game?.initialSize || state.tournamentSize}강</button>
         <button class="secondary-button" type="button" data-view="places">후보 둘러보기</button>
@@ -1172,6 +1223,10 @@ document.addEventListener("click", async (event) => {
   }
 
   const action = button.dataset.action;
+  if (action === "start-daily") {
+    startDailyGame();
+    return;
+  }
   if (action === "open-dokdo") {
     state.hiddenItemOpen = true;
     render();
